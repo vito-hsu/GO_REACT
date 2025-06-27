@@ -31,7 +31,7 @@ func main() {
 	// 跨域中间件 (开发环境需要，生产环境可能需要更精细的配置)
 	// 允许来自任何源的请求，并支持 GET, POST, OPTIONS 方法
 	r.Use(func(c *gin.Context) {
-		c.Writer.Header().Set("Access-Control-Allow-Origin", "*")
+		c.Writer.Header().Set("Access-Control-Allow-Origin", "https://slideshow-vito-1788.web.app") // 將這個 URL 替換進去
 		c.Writer.Header().Set("Access-Control-Allow-Methods", "GET, POST, OPTIONS")
 		// 允许的头部，这里列举了一些常用的
 		c.Writer.Header().Set("Access-Control-Allow-Headers", "Content-Type, Content-Length, Accept-Encoding, X-CSRF-Token, Authorization, accept, origin, Cache-Control, X-Requested-With")
