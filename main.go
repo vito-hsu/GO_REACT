@@ -55,7 +55,14 @@ func main() {
 
 	// 运行在 8080 端口
 	fmt.Println("Server is running on :8080")
-	r.Run(":8080")
+	// 從環境變數獲取埠號，如果沒有則預設為 8080
+	port := os.Getenv("PORT")
+	if port == "" {
+		port = "8080"
+	}
+
+	fmt.Println("Server is running on :" + port)
+	r.Run(":" + port)
 }
 
 // getImages 处理获取图片列表的请求
