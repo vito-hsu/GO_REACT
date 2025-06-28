@@ -1,0 +1,16 @@
+# Go 後端相關要忽略的
+/uploads/ # 如果你不想追蹤 uploads 裡面的圖片 (但你的需求是要追蹤的，所以這行可能不適合你)
+*.exe     # Go 編譯後的可執行檔
+*.zip
+*.tar.gz
+.env      # 環境變數檔 (如果有的話)
+
+# React 前端相關要忽略的
+/slideshow-frontend/node_modules/  # 忽略 React 前端的 node_modules
+/slideshow-frontend/build/         # 忽略 React 前端的 build 目錄
+/slideshow-frontend/.env.local     # 忽略 React 前端本地的環境變數檔
+/slideshow-frontend/npm-debug.log* # 忽略 React 前端生成的日誌
+/slideshow-frontend/yarn-debug.log*
+
+# 其他常見忽略項
+.DS_Store
